@@ -1,0 +1,20 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>a+b = @c</h1>
+<div class="input-group">
+    <input class="text-input" @bind="a"/>
+    <input class="text-input" @bind="b"/>
+    <button @onclick="Calculate">Считать</button>
+</div>
+
+@code{
+    private int a, b, c;
+
+    private void Calculate()
+    {
+        c = a + b;    
+    }
+}
+    
